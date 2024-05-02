@@ -1,3 +1,5 @@
+echo "click allow"
+termux-setup-storage
 echo "run apt update"
 apt update &> /dev/null
 apt upgrade -y
@@ -9,4 +11,12 @@ apt install virglrenderer-android -y &> /dev/null
 apt install pulseaudio -y &> /dev/null
 wget https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/rootfs.tar.xz
 tar -xf rootfs.tar.xz
-wget
+wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/Winedroid.sh
+cd ubuntu/opt
+tar -xf wine-9.3.tar.gz
+mv wine-9.3 wine
+cd
+echo "termux-x11 &> /dev/null & bash Winedroid.sh" >> $PREFIX/bin/winedroid
+chmod +x $PREFIX/bin/winedroid
+clear
+echo "start the winedroid type winedroid and enter"
