@@ -5,5 +5,5 @@ winedroid is a emulator x64_86 run winedows app in android
 [termux](https://f-droid.org/repo/com.termux_118.apk)
 ## how to download wine box64
 ```bash
-curl https://raw.githubusercontent.com/Terwine9090/ubuntu-wine/main/Install.sh >> install.sh && bash install.sh
-```
+curl https://raw.githubusercontent.com/Terwine9090/Winedroid/main/Install.sh >> install.sh && bash install.sh
+````
