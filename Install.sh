@@ -9,10 +9,10 @@ apt install termux-x11-nightly -y &> /dev/null
 apt install virglrenderer-android -y &> /dev/null
 apt install pulseaudio -y &> /dev/null
 echo "downloading rootfs"
-wget https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/rootfs.tar.xz
+wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/rootfs.tar.xz
 echo "extract rootfs"
 tar -xf rootfs.tar.xz
-wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/Winedroid.sh
+wget -q --show-progress https://raw.githubusercontent.com/Terwine9090/Winedroid/main/Winedroid.sh
 cd
 echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> .bashrc
 echo "termux-x11 &> /dev/null & bash Winedroid.sh" >> $PREFIX/bin/winedroid
