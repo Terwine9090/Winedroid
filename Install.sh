@@ -18,6 +18,7 @@ cd
 cd ubuntu/opt
 wget https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/files.tar.gz
 tar -xf files.tar.gz
+rm -rf files.tar.gz
 cd
 echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> .bashrc
 echo "termux-x11 &> /dev/null & bash Winedroid.sh" >> $PREFIX/bin/winedroid
