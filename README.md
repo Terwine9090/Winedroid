@@ -17,3 +17,5 @@ install to dxvk go to winedroid menu
 go 6 to install dxvk for Snapdragon chips
 
 go 7 to install dxvk-async for non Snapdragon chips
+
+select any version automatic install for wine
