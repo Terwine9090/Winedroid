@@ -13,11 +13,5 @@ is this already installed mesa-zink mesa-virgl and box64
 root is not required
 ## dxvk
 install to dxvk go to winedroid menu 
-
-
-
 go 6 to install dxvk for Snapdragon chips
-
-
-
 go 7 to install dxvk-async for non Snapdragon chips
