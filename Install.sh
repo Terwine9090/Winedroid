@@ -16,7 +16,7 @@ tar -xf rootfs.tar.xz
 wget -q --show-progress https://raw.githubusercontent.com/Terwine9090/Winedroid/main/Winedroid.sh
 cd
 cd ubuntu/opt
-wget https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/files.tar.gz
+wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/files.tar.gz
 tar -xf files.tar.gz
 rm -rf files.tar.gz
 cd
