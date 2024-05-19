@@ -9,7 +9,7 @@ apt install x11-repo -y &> /dev/null
 apt install termux-x11-nightly -y &> /dev/null
 apt install virglrenderer-android -y &> /dev/null
 apt install pulseaudio -y &> /dev/null
-if [ -e ubuntu ];then
+if [ -e rootfs.tar.xz ];then
 echo "rootfs is download"
 else
 echo "downloading rootfs"
