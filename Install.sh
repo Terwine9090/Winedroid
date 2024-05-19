@@ -19,8 +19,6 @@ cd ubuntu/opt
 wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/files.tar.gz
 tar -xf files.tar.gz
 rm -rf files.tar.gz
-cd $HOME/ubuntu/root/.cache/wine
-wget https://dl.winehq.org/wine/wine-mono/9.1.0/wine-mono-9.1.0-x86.msi
 cd
 rm -rf rootfs.tar.xz
 echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> .bashrc
