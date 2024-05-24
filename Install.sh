@@ -20,9 +20,9 @@ tar -xf rootfs.tar.xz
 wget -q --show-progress https://raw.githubusercontent.com/Terwine9090/Winedroid/main/Winedroid.sh
 cd
 cd ubuntu/opt
-wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/files.tar.gz
-tar -xf files.tar.gz
-rm -rf files.tar.gz
+wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/patch.tar.xz
+tar -xf patch.tar.xz
+rm -rf patch.tar.xz
 cd
 rm -rf rootfs.tar.xz
 echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> .bashrc
