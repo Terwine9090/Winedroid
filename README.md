@@ -12,16 +12,6 @@ is this already installed mesa-zink mesa-virgl and box64
 ## root
 root is not required
 ## dxvk
-install to dxvk go to winedroid menu 
-
-go 6 to install dxvk for Snapdragon chips
-
-go 7 to install dxvk-async for non Snapdragon chips
-
-select any version automatic install for wine
+install to dxvk go start menu and install virgl zink
 ## tweaks
-this already installed dll all libarry
-## update 
-winedroid menu inbuild update option 
-
-automatic update all package
+this already installed dll all libarry and 7zip
