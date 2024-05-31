@@ -3,7 +3,7 @@ echo "click allow"
 termux-setup-storage
 echo "instaling package"
 apt update &> /dev/null
-apt-get -y --with-new-pkgs -o Dpkg::Options::="--force-confdef" upgrade >/dev/null 2>&1
+apt -y  -o Dpkg::Options::="--force-confdef" install openssl
 apt install proot wget -y &> /dev/null
 apt install x11-repo -y &> /dev/null
 apt install termux-x11-nightly -y &> /dev/null
