@@ -3,7 +3,7 @@ echo "click allow"
 termux-setup-storage
 echo "instaling package"
 apt update &> /dev/null
-apt -y  -o Dpkg::Options::="--force-confdef" upgrade
+apt -y  -o Dpkg::Options::="--force-confdef" upgrade &> /dev/null
 apt install proot wget -y &> /dev/null
 apt install x11-repo -y &> /dev/null
 apt install termux-x11-nightly -y &> /dev/null
