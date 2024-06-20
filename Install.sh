@@ -36,6 +36,9 @@ cd
 cd ubuntu/usr/local/bin
 wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/wine64
 chmod +x wine64
+wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/wineserver
+chmod +x wineserver
+cd
 echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> .bashrc
 echo "termux-x11 &> /dev/null & bash Winedroid.sh" >> $PREFIX/bin/winedroid
 chmod +x $PREFIX/bin/winedroid
