@@ -29,7 +29,7 @@ rm -rf files.tar.gz
 cd
 rm -rf rootfs.tar.xz
 cd ubuntu/usr/bin
-wget https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/Installer.tar.gz
+wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/Installer.tar.gz
 tar -xf Installer.tar.gz
 rm -rf Installer.tar.gz
 cd
