@@ -17,9 +17,11 @@ wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/downlo
 fi
 echo "extract rootfs"
 tar -xf rootfs.tar.xz
+echo "download shortcut"
 wget -q --show-progress https://raw.githubusercontent.com/Terwine9090/Winedroid/main/Winedroid.sh
 cd
 cd ubuntu/opt
+echo "download patch"
 wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/patch.tar.xz
 tar -xf patch.tar.xz
 rm -rf patch.tar.xz
@@ -28,17 +30,6 @@ tar -xf files.tar.gz
 rm -rf files.tar.gz
 cd
 rm -rf rootfs.tar.xz
-cd ubuntu/usr/bin
-wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/Installer.tar.gz
-tar -xf Installer.tar.gz
-rm -rf Installer.tar.gz
-cd
-cd ubuntu/usr/local/bin
-wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/wine64 &> /dev/null
-chmod +x wine64
-wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/wineserver &> /dev/null
-chmod +x wineserver
-cd
 echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> .bashrc
 echo "termux-x11 &> /dev/null & bash Winedroid.sh" >> $PREFIX/bin/winedroid
 chmod +x $PREFIX/bin/winedroid
