@@ -38,7 +38,7 @@ echo "download wine"
 wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/wine-9.9.tar.xz
 tar -xf wine-9.9.tar.xz
 fi
-cd bin
+cd $PREFIX/glibc/bin
 if [ -e ib.exe ];then
 printf "" 
 else
