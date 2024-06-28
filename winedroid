@@ -1,0 +1,3 @@
+unset LD_PRELOAD
+termux-x11 &> /dev/null &
+source $PREFIX/glibc/opt/menu
