@@ -3,11 +3,13 @@ cd $PREFIX/glibc
 if [ -e lib ] && [ -e bin ];then
 printf ""
 else
+cd $PREFIX
 echo "download glibc-prefix"
 wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/glibc-prefix.tar.xz
 tar -xf glibc-prefix.tar.xz
 rm -rf glibc-prefix.tar.xz
 fi
+cd $PREFIX/glibc
 cd opt
 if [ -e prefix-tweaks ] && [ -e libs.7z ];then
 printf ""
