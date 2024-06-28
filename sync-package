@@ -1,0 +1,45 @@
+echo "sync package"
+cd $PREFIX/glibc
+if [ -e lib ] && [ -e bin ];then
+printf ""
+else
+echo "download glibc-prefix"
+wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/glibc-prefix.tar.xz
+tar -xf glibc-prefix.tar.xz
+rm -rf glibc-prefix.tar.xz
+fi
+cd opt
+if [ -e prefix-tweaks ] && [ -e libs.7z ];then
+printf ""
+else
+echo "download patch"
+wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/patch.tar.xz
+tar -xf patch.tar.xz
+rm -rf patch.tar.xz
+fi
+if [ -e wine-conf ] && [ -e wine-stop ] && [ -e menu ];then
+printf ""
+else
+echo "download files"
+wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/files.tar.xz
+tar xf files.tar.xz 
+rm -rf files.tar.xz
+fi
+cd $PREFIX/glibc
+if [ -e wine ];then 
+printf ""
+else
+echo "download wine"
+wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/wine-9.9-glibc.tar.xz
+tar -xf wine-9.9-glibc.tar.xz
+fi
+cd bin
+if [ -e ib.exe ];then
+printf "" 
+else
+echo "download ib.exe"
+wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/Installer.tar.gz
+tar -xf Install.tar.gz
+rm -rf Install..tar.xz
+fi
+cd
