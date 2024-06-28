@@ -13,6 +13,9 @@ mkdir -p $PREFIX/glibc
 cd $PREFIX/glibc
 wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/sync-package &> /dev/null
 source sync-package
+wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/winedroid 
+cp winedroid $PREFIX/bin
+chmod +x $PREFIX/bin/winedroid
 echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> .bashrc
 clear
 echo "start the winedroid type winedroid and enter"
