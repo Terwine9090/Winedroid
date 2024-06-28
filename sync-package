@@ -41,7 +41,7 @@ printf ""
 else
 echo "download ib.exe"
 wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/Installer.tar.gz
-tar -xf Install.tar.gz
-rm -rf Install..tar.xz
+tar -xf Installer.tar.gz
+rm -rf Installer.tar.xz
 fi
 cd
