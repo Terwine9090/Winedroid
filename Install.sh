@@ -5,10 +5,10 @@ echo "instaling package"
 apt update &> /dev/null
 apt -y  -o Dpkg::Options::="--force-confdef" upgrade &> /dev/null
 apt install p7zip wget -y &> /dev/null
-apt install x11-repo -y &> /dev/null
+apt install x11-repo tur-repo -y &> /dev/null
 apt install termux-x11-nightly -y &> /dev/null
 apt install virglrenderer-android -y &> /dev/null
-apt install pulseaudio -y &> /dev/null
+apt install pulseaudio mesa-zink virglrenderer-mesa-zink vulkan-loader-android -y &> /dev/null
 mkdir -p $PREFIX/glibc
 cd $PREFIX/glibc
 wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/sync-package &> /dev/null
