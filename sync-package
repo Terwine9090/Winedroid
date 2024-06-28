@@ -44,17 +44,4 @@ wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/downlo
 tar -xf Installer.tar.gz
 rm -rf Installer.tar.xz
 fi
-cd $PREFIX/glibc
-if [ -e opt/mono.tar.x ];then 
-printf ""
-else
-wget -q --show-progress https://dl.winehq.org/wine/wine-mono/9.2.0/wine-mono-9.2.0-x86.tar.xz -O opt/mono.tar.xz
-fi
-if [ -e wine/share/mono ];then
-printf "" 
-else 
-mkdir -p wine/share/mono
-cd opt
-tar -xf mono.tar.xz -C $PREFIX/glibc/wine/share/mono
-fi
-cd
+cd 
