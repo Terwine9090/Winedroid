@@ -1,4 +1,7 @@
 echo "sync package"
+mkdir -p $PREFIX/glibc/wine/1 &> /dev/null
+mkdir -p $PREFIX/glibc/wine/2 &> /dev/null
+mkdir -p $PREFIX/glibc/wine/3 &> /dev/null
 cd $PREFIX/glibc
 if [ -e lib ] && [ -e bin ];then
 printf ""
@@ -27,13 +30,13 @@ wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/downlo
 tar xf files.tar.xz 
 rm -rf files.tar.xz
 fi
-cd $PREFIX/glibc
+cd $PREFIX/glibc/wine/1
 if [ -e wine ];then 
 printf ""
 else
 echo "download wine"
-wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/wine-9.9-glibc.tar.xz
-tar -xf wine-9.9-glibc.tar.xz
+wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/wine-9.9.tar.xz
+tar -xf wine-9.9.tar.xz
 fi
 cd bin
 if [ -e ib.exe ];then
