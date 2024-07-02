@@ -47,4 +47,14 @@ wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/downlo
 tar -xf Installer.tar.gz
 rm -rf Installer.tar.xz
 fi
-cd 
+cd $HOME
+if [ -e .cache/wine/mono ];then
+printf ""
+else
+mkdir -p .cache/wine/mono
+cd .cache/wine/mono
+wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/mono.tar.xz
+tar -xf mono.tar.xz 
+rm -rf mono.tar.xz
+fi
+cd
