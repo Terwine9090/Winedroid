@@ -1,4 +1,2 @@
 virgl_test_server_android &
-unset LD_PRELOAD
-termux-x11 &> /dev/null &
 source $PREFIX/glibc/opt/menu
