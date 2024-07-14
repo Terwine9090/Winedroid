@@ -1,2 +1,2 @@
 virgl_test_server_android &
-source $PREFIX/glibc/opt/menu
+source $PREFIX/glibc/opt/winedroid
