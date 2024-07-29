@@ -14,7 +14,7 @@ rm -rf glibc-prefix.tar.xz
 fi
 cd $PREFIX/glibc
 cd opt
-if [ -e prefix-tweaks ] && [ -e libs.7z ];then
+if [ -e prefix-tweaks ] && [ -e libs.7z ] &&[ -e wine-conf ] && [ -e wine-stop ] && [ -e menu ];then
 printf ""
 else
 echo "download patch"
@@ -22,21 +22,15 @@ wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/downlo
 tar -xf patch.tar.xz
 rm -rf patch.tar.xz
 fi
-if [ -e wine-conf ] && [ -e wine-stop ] && [ -e menu ];then
+cd $PREFIX/glibc/opt
+mkdir -p $PREFIX/glibc/wine/tmp &> /dev/null
+if [ -e wpl ];then 
 printf ""
 else
-echo "download files"
-wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/files.tar.xz
-tar xf files.tar.xz 
-rm -rf files.tar.xz
-fi
-cd $PREFIX/glibc/wine/1
-if [ -e wine ];then 
-printf ""
-else
+cd $PREFIX/glibc/wine/tmp
 echo "download wine"
 wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/wine-9.9.tar.xz
-tar -xf wine-9.9.tar.xz
+tar -xf wine-9.9.tar.xz -C $PREFIX/glibc/wine/1
 fi
 cd $PREFIX/glibc/bin
 if [ -e ib.exe ];then
