@@ -25,6 +25,7 @@ fi
 cd $PREFIX/glibc/opt
 mkdir -p $PREFIX/glibc/wine/tmp &> /dev/null
 if [ -e wpl ];then
+rm -rf wpl
 cd $PREFIX/glibc/wine/tmp
 echo "download wine"
 wget -q --show-progress https://github.com/Terwine9090/Winedroid/releases/download/1.0.0/wine-9.9.tar.xz
