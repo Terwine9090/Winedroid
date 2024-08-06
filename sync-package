@@ -14,7 +14,7 @@ rm -rf glibc-prefix.tar.xz
 fi
 cd $PREFIX/glibc
 cd opt
-if [ -e prefix-tweaks ] && [ -e libs.7z ] &&[ -e wine-conf ] && [ -e wine-stop ] && [ -e menu ];then
+if [ -e prefix-tweaks ] && [ -e libs.7z ] && [ -e wine-conf ] &&  [ -e menu ];then
 printf ""
 else
 echo "download patch"
