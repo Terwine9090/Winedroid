@@ -13,8 +13,9 @@ mkdir -p $PREFIX/glibc
 cd $PREFIX/glibc
 wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/sync-package &> /dev/null
 source sync-package
-wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/winedroid 
+wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/winedroid &> /dev/null
 mv winedroid $PREFIX/bin
 chmod +x $PREFIX/bin/winedroid
+7z x $PREFIX/glibc/opt/windows10.7z -o$HOME
 echo "start the winedroid type winedroid and enter"
 
