@@ -9,6 +9,7 @@ apt install x11-repo -y &> /dev/null
 apt install termux-x11-nightly -y &> /dev/null
 apt install virglrenderer-android zenity -y &> /dev/null
 apt install pulseaudio virglrenderer vulkan-loader-android -y &> /dev/null
+apt install xfce4*
 mkdir -p $PREFIX/glibc
 cd $PREFIX/glibc
 wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/sync-package &> /dev/null
