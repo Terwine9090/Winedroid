@@ -9,6 +9,7 @@ apt install x11-repo -y &> /dev/null
 apt install termux-x11-nightly -y &> /dev/null
 apt install virglrenderer-android zenity -y &> /dev/null
 apt install pulseaudio virglrenderer vulkan-loader-android -y &> /dev/null
+apt install firefox code-oss &> /dev/null
 apt install xfce4* &> /dev/null
 mkdir -p $PREFIX/glibc
 cd $PREFIX/glibc
@@ -19,7 +20,6 @@ source sync-package
 wget https://raw.githubusercontent.com/Terwine9090/Winedroid/main/winedroid &> /dev/null
 mv winedroid $PREFIX/bin
 chmod +x $PREFIX/bin/winedroid
-7z x $PREFIX/glibc/opt/windows10.7z -o$HOME &> /dev/null
 echo "start the winedroid type winedroid and enter"
 
 
