@@ -5,7 +5,7 @@ echo "instaling package"
 apt update &> /dev/null
 apt -y  -o Dpkg::Options::="--force-confdef" upgrade &> /dev/null
 apt install p7zip wget cabextract -y &> /dev/null
-apt install x11-repo -y &> /dev/null
+apt install x11-repo tur-repo -y &> /dev/null
 apt install termux-x11-nightly -y &> /dev/null
 apt install virglrenderer-android zenity -y &> /dev/null
 apt install pulseaudio virglrenderer vulkan-loader-android -y &> /dev/null
